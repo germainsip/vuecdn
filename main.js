@@ -1,1 +1,8 @@
-const product = 'Chaussettes'
+const app = Vue.createApp({
+    data() {
+        return {
+            product: 'Chaussettes'
+
+        }
+    }
+})
