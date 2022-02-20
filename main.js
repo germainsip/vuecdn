@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
+            cart:0,
             product: 'Chaussette',
             image: './assets/images/socks_blue.jpg',
             inStock: true,
