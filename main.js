@@ -1,9 +1,10 @@
 const app = Vue.createApp({
     data() {
         return {
-            product: 'Chaussettes',
+            product: 'Chaussette',
             image: './assets/images/socks_blue.jpg',
-            inventory : 50
+            inStock: true,
+            details: ['50% coton', '30% laine', '20% polyester']
         }
     }
 })
