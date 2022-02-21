@@ -3,8 +3,7 @@ const app = Vue.createApp({
         return {
             cart:0,
             product: 'Chaussette',
-            image: './assets/images/socks_blue.jpg',
-            inStock: true,
+            selectedVariant: 0,
             details: ['50% coton', '30% laine', '20% polyester'],
             variants: [
                 {id: 1234 , color: 'bleu', back: '#38475F', image: './assets/images/socks_blue.jpg',quantity: 50},
@@ -22,8 +21,16 @@ const app = Vue.createApp({
             }
             
         }, 
-        changeImg(variantImage) {
-            this.image = variantImage
+        updateVariant(index) {
+            this.selectedVariant = index
+        }
+    },
+    computed: {
+        image() {
+            return this.variants[this.selectedVariant].image
+        },
+        inStock() {
+            return this.variants[this.selectedVariant].quantity
         }
     }
 })

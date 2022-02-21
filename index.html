@@ -28,13 +28,13 @@
               <li v-for="detail in details">{{detail}}</li>
             </ul>
             <p>Existe en:</p>
-            <div
-              class="color-circle"
-              :style="{backgroundColor: variant.back}"
-              v-for="variant in variants"
-              :key="variant.id"
-              @mouseOver="changeImg(variant.image)"
-            ></div>
+            <div 
+              v-for="(variant, index) in variants" 
+              :key="variant.id" 
+              @mouseover="updateVariant(index)" 
+              class="color-circle" 
+              :style="{ backgroundColor: variant.back }">
+            </div>
             <button
               class="button"
               :class="{disabledButton: !inStock}"
