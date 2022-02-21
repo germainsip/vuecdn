@@ -28,8 +28,10 @@
                 <li v-for="detail in details">{{detail}}</li>
               </ul>
               <p>Existe en:</p>
-              <div v-for="variant in variants" :key="variant.id">{{variant.color}}</div>
-              <button class="button">Ajouter au panier</button>
+              <div v-for="variant in variants" :key="variant.id" @mouseOver="changeImg(variant.image)">{{variant.color}}</div>
+              <button @click="addToCart" class="button">Ajouter au panier</button>
+              <button @click="remFromCart" class="button">Enlever du panier</button>
+              
             </div>
           </div>
         </div>
