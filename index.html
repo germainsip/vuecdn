@@ -29,8 +29,22 @@
               </ul>
               <p>Existe en:</p>
               <div class="color-circle" :style="{backgroundColor: variant.back}" v-for="variant in variants" :key="variant.id" @mouseOver="changeImg(variant.image)"></div>
-              <button @click="addToCart" class="button">Ajouter au panier</button>
-              <button @click="remFromCart" class="button">Enlever du panier</button>
+              <button 
+              class="button"
+              :class="{disabledButton: !inStock}"
+              :disabled="!inStock" 
+              @click="addToCart" 
+              >
+              Ajouter au panier
+            </button>
+              <button 
+              class="button"
+              :class="{disabledButton: !inStock}"
+              :disabled="!inStock" 
+              @click="remFromCart" 
+              >
+              Enlever du panier
+            </button>
               
             </div>
           </div>
