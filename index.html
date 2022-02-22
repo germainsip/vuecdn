@@ -12,8 +12,8 @@
     <div id="app">
       <div class="nav-bar"></div>
 
-      <div class="cart">Panier({{ cart }})</div>
-      <product-display :premium="premium"></product-display>
+      <div class="cart">Panier({{ cart.length }})</div>
+      <product-display :premium="premium" @add-to-cart="addToCart" @rem-from-cart="remFromCart"></product-display>
     </div>
 
     <!-- Import App -->
