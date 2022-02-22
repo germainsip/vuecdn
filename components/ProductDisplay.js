@@ -30,21 +30,21 @@ app.component("product-display", {
               :style="{ backgroundColor: variant.back }">
             </div>
             <button
-              class="button"
-              :class="{disabledButton: !inStock}"
-              :disabled="!inStock"
-              @click="addToCart"
-            >
-              Ajouter au panier
-            </button>
-            <button
-              class="button"
-              :class="{disabledButton: !inStock}"
-              :disabled="!inStock"
-              @click="remFromCart"
-            >
-              Enlever du panier
-            </button>
+            class="button"
+            :class="{disabledButton: !inStock}"
+            :disabled="!inStock"
+            @click="addToCart"
+          >
+            Ajouter au panier
+          </button>
+          <button
+            class="button"
+            :class="{disabledButton: !inStock}"
+            :disabled="!inStock"
+            @click="remFromCart"
+          >
+            Enlever du panier
+          </button>
           </div>
         </div>
       </div>`,
