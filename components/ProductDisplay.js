@@ -44,6 +44,10 @@ app.component("product-display", {
             Enlever du panier
           </button>
           </div>
+          <!--ICI-->
+          <review-list v-if="reviews.length" :reviews="reviews"></review-list>
+          <review-form @review-submitted="addReview"></review-form>
+
         </div>
       </div>`,
   data() {
@@ -67,6 +71,7 @@ app.component("product-display", {
           quantity: 20,
         },
       ],
+      reviews: [],
     };
   },
   methods: {
@@ -82,6 +87,9 @@ app.component("product-display", {
     updateVariant(index) {
       this.selectedVariant = index;
     },
+    addReview(review) {
+      this.reviews.push(review)
+    }
   },
   computed: {
     image() {
