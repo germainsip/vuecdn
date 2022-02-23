@@ -8,7 +8,7 @@ app.component("review-form",
     <input id="name" type="text" />
 
     <label for="review">Avis:</label>
-    <input id="review" type="text" />
+    <textarea id="review"></textarea>
 
     <label for="rating">Note:</label>
     <select id="rating">
